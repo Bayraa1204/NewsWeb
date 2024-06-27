@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.leftheadwords:hover {
+    cursor: pointer;
+    color: #0040d4;
+}
+.leftheadwords {
+    width: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+body {
+    display: flex;
+    justify-content: center;
+}
+.header {
+    position: fixed;
+    width: 100vw;
+    height: 66.5px; 
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+    padding: 0px 28px 0px 25px;
+    justify-content: space-evenly;
+    box-shadow:  0px 5px 10px 0px rgba(0, 0, 0, 0.03);
+}
+.navall {
+    display: flex;
+    justify-content: space-between;
+    width: 87vw;
+}
+.leftnavcontainer {
+    display: flex;
+    width: 700px;
+    height: 56.5px;
+    align-items: center;
+}
+.rightnavcontainer {
+    display: flex;
+    align-items: center;
+    width: 318px;
+    height: 56.5px;
+    justify-content: center
+}
+.letsread:hover {
+    background-color: #e9ecef;
+    color: #777;
+    cursor: pointer;
+}
+.letsread {
+    color: #FFFFFF;
+    background-color: #0040d4;
+    width: 125px;
+    height: 37px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;    
+    transition-duration: 0.2s;
+}
+.rightheadwords:hover {
+    cursor: pointer;
+}
+.rightheadwords {
+    width: 153px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.allexceptheader {
+    padding: 90.5px 0px 0px;
+}
+.flashinglemonadecontainer {
+    width: 1180px;
+    height: 36px;
+    display: flex;
+    border-radius: 6px;
+}
+.flashinglemonade {
+    width: 85px;
+    height: 36px;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.flashinglemonadewords:hover {
+    cursor: pointer;
+}
+.flashinglemonadewords {
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    color: #000;
+    padding: 10px 16px;
+    background-color: #f5f8fc;
+    width: 1095px;
+}       
+.bigimg:hover {
+    background-color: #777;
+}
+.bigimg {
+    width: 778px;
+    height: 517px;
+    background-image: url("image.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
