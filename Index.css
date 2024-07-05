@@ -19,6 +19,10 @@ body {
 }
 .header {
     position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
     width: 100vw;
     height: 66.5px; 
     display: flex;
@@ -30,6 +34,7 @@ body {
     padding: 0px 28px 0px 25px;
     justify-content: space-evenly;
     box-shadow:  0px 5px 10px 0px rgba(0, 0, 0, 0.03);
+    background-color: #FFFFFF;
 }
 .navall {
     display: flex;
@@ -56,7 +61,7 @@ body {
 }
 .letsread {
     color: #FFFFFF;
-    background-color: #0040d4;
+    background-color: rgb(0, 64, 212);
     width: 125px;
     height: 37px;
     display: flex;
@@ -76,12 +81,16 @@ body {
 }
 .allexceptheader {
     padding: 90.5px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .flashinglemonadecontainer {
     width: 1180px;
     height: 36px;
     display: flex;
-    border-radius: 6px;
+    border: 1px solid white;
 }
 .flashinglemonade {
     width: 85px;
@@ -93,6 +102,9 @@ body {
     font-size: 10px;
     font-weight: 700;
     font-family: Arial, Helvetica, sans-serif;
+    border-top-left-radius: 5px 5px;
+    border-bottom-left-radius: 5px 5px;
+    animation: flashing 1s infinite;
 }
 .flashinglemonadewords:hover {
     cursor: pointer;
@@ -105,18 +117,654 @@ body {
     padding: 10px 16px;
     background-color: #f5f8fc;
     width: 1095px;
+    border-top-right-radius: 5px 5px;
+    border-bottom-right-radius: 5px 5px;
 }       
 .bigimg:hover {
     background-color: #777;
 }
 .bigimg {
     width: 778px;
-    height: 517px;
-    background-image: url("image.png");
-    background-position: center;
+    height: 497px;
+    background-image: url("https://dash-api.yld.mn/api/image/c76d7a96-6ba0-4b7d-80d3-41e812370818");
     background-size: contain;
     background-repeat: no-repeat;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    border: 0.5px solid #e5e2e2;   
+    border-radius: 5px;
+    padding-bottom: 21px;
+}
+.overlay {
+    width: 100%; 
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: black;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.bigimg:hover .overlay {
+    opacity: 0.5;
+}
+.firstbignews {
+    width: 720px;
+    height: 71.2px;
+    background-color: white;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 18px;
+    padding-right: 38.89px;
+}
+.littlebluetexts {
+    color: rgb(0, 64, 212);
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+.onebigdarktext {
+    color: #000;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+.tinygreytexts {
+    color: rgb(114, 128, 143);
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    height: 22.5px;
+}
+.newsword-container {
+    width: 721.1px;
+    height: 91.2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; 
+}
+.BelowHeader {
+    margin-top: 25px;
+    display: flex;
+}
+.littleimg {
+    width: 378px;
+    height: 518px;
+    background-image: url("https://dash-api.yld.mn/api/image/e2bf93fa-56ec-4a7b-849d-23329f654d2b"); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    border: 0.5px solid #e5e2e2;   
+    border-radius: 5px;
+}
+
+.littlenewsword-container {
+    width: 350px;
+    height: 117.39px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; 
+    border-bottom: 0.5px solid #e5e2e2;
+}
+.littlebluetexts {
+    color: #0040d4;
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+.onelittledarktext {
+    color: #000;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+.tinygreytexts {
+    color: rgb(163, 163, 163);
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+.firstlittlenews {
+    width: 320.12px;
+    height: 117.2px;
+    background-color: white;
+    padding-left: 18px;
+    padding-right: 38.89px;
+    border-bottom: 0.5px solid #e5e2e2;
+}
+.secondscrolling {
+    display: flex;
+    width: 100vw;
+    height: 402px;
+    justify-content: center;
+    align-items: center ;
+} 
+.Scroll {
+    width: 380px;
+    height: 380px;
+    background-color: #000;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.ScrollInside {
+    cursor: pointer;
+    padding: 0px 0px 18px 18px;
+    width: 348px;
+    height: 305.6px;
+    overflow: scroll;
+}
+.Head { 
+    display: flex;
+    align-items: flex-end;
+    background-color: #000;
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    width: 328px;
+    height: 38.4px;
+    position: sticky;
+    padding: 0px 0px 0px 18px;
+    top: 0;
+    left: 0;
+}
+.Descriptions {
+    width: 312px;
+    padding: 0px 16px 0px 0px;
+}
+.DescriptionBoxes {
+    padding: 13px 0px;
+    width: 328px;
+    height: 41.5px;
+    border-top: 0.5px solid #9f9f9fdf;
+    display: flex;
+    flex-direction: column;
+}
+.LittleWhiteText {
+    font-size: 15px;
+    color:  rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    height: 22.5px;
+}
+.BusinessWoman {
+    width: 380px;
+    height: 380px;
+    background-image: url("https://dash-api.yld.mn/api/image/7c3c37d5-408d-4a41-b89e-14a83186a76f"); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    border: 0.5px solid #e5e2e2;   
+    border-radius: 5px;
+    display: flex;
+    align-items: flex-end;
+}
+.Interview {
+    width: 344px;
+    height: 127px;
+    padding: 50px 18px 13px 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.TinyWhiteTexts {
+    width: 344px;
+    height: 24px;
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    margin-bottom: 5px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: flex-end;
+}
+.NormalWhiteTexts {
+    width: 345px;
+    height: 73px;
+    color: #FFFFFF;
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+.SideNews {
+    width: 380px;
+    height: 380px;
+    border: 0.5px solid #e5e2e2;
+    border-radius: 5px  ;
+}
+@keyframes flashing {
+    0% {
+        opacity: .5;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: .5;
+    }
+}
+
+.ScrollInside::-webkit-scrollbar {
+    width: 5px;
+    height: 0;
+  }
+.ScrollInside::-webkit-scrollbar-track {
+    background: #000; 
+  }
+.ScrollInside::-webkit-scrollbar-thumb {
+    background: #ffda00;; 
+    border-radius: 11px;
+  }
+  .EmailTime {
+    width: 1180px;
+    height: 309.3px;
+    background-image: url("https://lemonpress.mn/assets/subscribe-cover.png"); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    border: 0.5px solid #e5e2e2;   
+    border-radius: 5px;
+  }
+  .Email-Container {
+    background-color: #0040d4;
+    width: 100%;
+    height: 309.3px;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+    opacity: 0.8;
+    border-radius: 5px;
+  }
+  .TheBox {
+    background-color: #FFFFFF;
+    height: 230px;
+    width: 90%;
+    position: absolute;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  } 
+  .BlueFiltered {
+    width: 100vw;
+    height: 310px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+  }
+  .Third {
+    height: 310px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .Thirdsector {
+    width: 74%;
+    height: 310px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .bigdarktext {
+      color: #000;
+      font-size: 24px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 700;
+      text-align: center;
+  }
+  .greytext {
+    color: #72808f;
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+  }
+  .littlegrey {
+    font-size: 13px;
+    font-weight: 400; 
+    color: #72808f;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 50%;
+    height: 23.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    text-align: center;
+  }
+  .emailinput {
+    display: flex; 
+    align-items: center; 
+    border: 1px solid #0040d4;
+    border-radius: 6px;
+  }
+  input[type=text], select {
+    width: 100%;
+    height: 100%;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  form {
+    width: 100%;
+  }
+  input[type=submit] {
+    width: 100%;
+    background-color: #0040d4;
+    color: white;
+    height: 52px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  .FourthSection {
+    width: 74%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .LeftNews {
+    width: 67%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .Advertisement {
+    width: 33%;
+    height: 100%;
+    gap: 22px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+  }
+  .Ad-container {
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    top: 66.5px;
+    margin-bottom: 44px;
+    margin-top: 22px;
+    gap: 22px;
+  }
+  .Ads {
+    width: 380px;
+    height: 256.5px;
+    background-image: url("https://dash-api.yld.mn/api/image/f3e19cc3-d9cc-4336-944a-2b0acfab44b2"); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border: 0.5px solid #e5e2e2;   
+    border-radius: 5px;
+    border-radius: 5px;
+    position: relative;
+  }
+  .AdsPlus {
+    width: 380px;
+    height: 265px;
+    background-image: url("https://dash-api.yld.mn/api/image/7aba01bf-b8df-4c4e-8035-cf8985c00e27"); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border: 0.5px solid #e5e2e2;   
+    border-radius: 5px;
+    border-radius: 5px;
+    position: relative;
+  }
+  .RowNewsContainer {
+    display: flex;
+    border: 0.5px solid #e5e2e2;   
+    border-radius: 5px;
+    gap: 18px;
+    width: 100%;
+    align-items: center;
+  }
+  .RowImage {
+    width: 320px;
+    height: 188.71px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border: 0.5px solid #e5e2e2;   
+    border-radius: 5px;
+    border-radius: 5px;
+  }
+  .littlenewsrow-container {
+      width: 419px;
+      height: 103px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; 
+
+  }
+  .firstrownews {
+    width: 55%;
+    height: 162px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .SeeMore {
+    width: 780px;
+    height: 37px;
+    background-color: #f5f8fc;
+    color: #000;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    cursor: pointer;
+  }
+  .SeeMore:hover{
+    background-color: #d3d4d5;
+  }
+  .FifthHeader {
+    width: 1180px;
+    height: 46px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+  }
+  .LineDot {
+    border-bottom: 1px dotted #a3a3a3;
+    height: 1px;
+    width: 80%;
+  }
+  .FifthMainContext {
+    display: flex;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+    width: 20%;
+  }
+  .FifthSide {
+    font-size: 13px;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 6%;
+    color: #000;
+  }
+  .FifthImg {
+    width: 378px;
+    height: 355px;
+    background-image: url("https://dash-api.yld.mn/api/image/3edbed96-5515-4e0f-89bc-7a24789564f2"); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    border: 0.5px solid #e5e2e2;   
+    border-radius: 5px;
+  }
+  .FifthContxt {
+    margin-bottom: 60px;
+  }
+  .ThreeBox {
+    display: flex;
+    justify-content: space-between;
+  }
+  .ThreeBoxesWithHeader {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: center;
+    gap: 20px;
+  }
+  .Footer {
+    width: 100vw;
+    background-color: #0040d4;
+  }
+  .FooterFirst {
+    width: 100%;
+    height: 96px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+  .FooterMiddle {
+    border: 1px solid #8193b7df  ;
+    width: 100%;
+    height: 240px;
+    display: flex;
+    justify-content: center;
+  }
+  .Middle {
+    width: 1180px;
+    display: flex;
+    padding-top: 28px;
+  }
+  .FooterLast{
+    width: 100%;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .logos {
+    height: 40px;
+    width: 40px;
+  }
+  .footerlemon {
+        width: 330px;
+        height: 168px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+  }
+  .footergreytextedleft {
+    height: 103px;
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .footergreytextedright {
+    height: 131.5px;
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .greypopingwhite {
+    width: 100%;
+    height: 76.5px;
+    font-size: 13px;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .grey {
+    color: #C7D9F6;
+    cursor: pointer;
+  }
+  .grey:hover {
+    color: white;
+  }
+  .FooterWhiteTexts {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+  }
+  .copyright {
+    font-size: 12px;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    display: flex;
+    align-items: center;
+  }
+  .Powered {
+    background-color: rgba(255, 255, 255, 0.137);
+    height: 28px;
+    width: 130px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+  .PoweredByText {
+    font-size: 10px;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+  }
+  .PowerAndCopy {
+    height: 28px;
+    width: 1180px;
+    display: flex;
+    justify-content: space-between;
+  }
+  @media only screen and (max-width: 480px) {
+    .BelowHeader {flex-direction: column; align-items: center; justify-content: center;}
+    .bigimg {width: 100vw ; height: 273.35px;}
+    .firstbignews {width: 100vw;}
+    .newsword-container {width: 100vw;}
+    .secondscrolling {flex-direction: column; height: 1180px; justify-content: center;}
+    .bigdarktext {font-size: 18px;}
+    .TheBox {width: 100%;}
+    .Thirdsector {width: 90% ;}
+    .littlegrey{width: 95%;}
+    .RowNewsContainer {flex-direction: column; align-items: center;}
+    .FourthSection {flex-direction: column;}    
+  }
