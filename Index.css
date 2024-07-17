@@ -7,15 +7,20 @@
     color: #0040d4;
 }
 .leftheadwords {
-    width: 140px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 5px;
 }
 body {
-    display: flex;
-    justify-content: center;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+.All {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 .header {
     position: fixed;
@@ -31,7 +36,6 @@ body {
     font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
     color: #000;
-    padding: 0px 28px 0px 25px;
     justify-content: space-evenly;
     box-shadow:  0px 5px 10px 0px rgba(0, 0, 0, 0.03);
     background-color: #FFFFFF;
@@ -46,6 +50,7 @@ body {
     width: 700px;
     height: 56.5px;
     align-items: center;
+    justify-content: space-evenly;
 }
 .rightnavcontainer {
     display: flex;
@@ -85,6 +90,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100vw;
 }
 .flashinglemonadecontainer {
     width: 1180px;
@@ -114,17 +120,22 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 700;
     color: #000;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     padding: 10px 16px;
     background-color: #f5f8fc;
-    width: 1095px;
+    width: 100% ;
     border-top-right-radius: 5px 5px;
     border-bottom-right-radius: 5px 5px;
 }       
 .bigimg:hover {
     background-color: #777;
 }
+.bigimg-container {
+  width: 100%;
+}
 .bigimg {
-    width: 778px;
     height: 497px;
     background-image: url("https://dash-api.yld.mn/api/image/c76d7a96-6ba0-4b7d-80d3-41e812370818");
     background-size: contain;
@@ -154,10 +165,6 @@ body {
     width: 720px;
     height: 71.2px;
     background-color: white;
-    padding-top: 13px;
-    padding-bottom: 13px;
-    padding-left: 18px;
-    padding-right: 38.89px;
 }
 .littlebluetexts {
     color: rgb(0, 64, 212);
@@ -186,8 +193,15 @@ body {
     justify-content: space-around; 
 }
 .BelowHeader {
-    margin-top: 25px;
+    margin: 25px 0px;
     display: flex;
+    gap: 20px;
+}
+.littleimg-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .littleimg {
     width: 378px;
@@ -480,7 +494,7 @@ body {
     font-size: 16px;
   }
   .FourthSection {
-    width: 74%;
+    gap: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -543,17 +557,18 @@ body {
     border: 0.5px solid #e5e2e2;   
     border-radius: 5px;
     gap: 18px;
-    width: 100%;
     align-items: center;
+    width: 100%;
   }
   .RowImage {
-    width: 320px;
-    height: 188.71px;
-    background-size: cover;
+    width: 100%;
+    height: 250px;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     cursor: pointer;
     border: 0.5px solid #e5e2e2;   
+    margin-top: 25px;
     border-radius: 5px;
     border-radius: 5px;
   }
@@ -566,7 +581,7 @@ body {
 
   }
   .firstrownews {
-    width: 55%;
+    width: 100%;
     height: 162px;
     background-color: white;
     display: flex;
@@ -574,7 +589,7 @@ body {
     align-items: center;
   }
   .SeeMore {
-    width: 780px;
+    width: 100%;
     height: 37px;
     background-color: #f5f8fc;
     color: #000;
@@ -661,18 +676,19 @@ body {
   .FooterMiddle {
     border: 1px solid #8193b7df  ;
     width: 100%;
-    height: 240px;
     display: flex;
     justify-content: center;
   }
   .Middle {
-    width: 1180px;
+    width: 100vw;
     display: flex;
     padding-top: 28px;
   }
+  .Middle-Container {
+    width: 100vh;
+  }
   .FooterLast{
     width: 100%;
-    height: 58px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -682,7 +698,6 @@ body {
     width: 40px;
   }
   .footerlemon {
-        width: 330px;
         height: 168px;
         display: flex;
         flex-direction: column;
@@ -750,21 +765,100 @@ body {
     color: white;
   }
   .PowerAndCopy {
-    height: 28px;
     width: 1180px;
     display: flex;
     justify-content: space-between;
   }
-  @media only screen and (max-width: 480px) {
-    .BelowHeader {flex-direction: column; align-items: center; justify-content: center;}
-    .bigimg {width: 100vw ; height: 273.35px;}
-    .firstbignews {width: 100vw;}
-    .newsword-container {width: 100vw;}
-    .secondscrolling {flex-direction: column; height: 1180px; justify-content: center;}
-    .bigdarktext {font-size: 18px;}
-    .TheBox {width: 100%;}
-    .Thirdsector {width: 90% ;}
-    .littlegrey{width: 95%;}
-    .RowNewsContainer {flex-direction: column; align-items: center;}
-    .FourthSection {flex-direction: column;}    
+  @media only screen and (max-width: 768px) {
+    .BelowHeader {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;  
+    }
+    .bigimg {
+      width: 100vw;
+      height: 273.35px;
+    }
+    .navall {
+      display: none;
+    }
+    .firstbignews {
+      width: 100%;
+    }
+    .onebigdarktext {
+      width: 100%;
+    }
+    .newsword-container {
+      width: 100vw;
+    }
+    .secondscrolling {
+      flex-direction: column;
+      height: 1180px;
+      justify-content: center;
+    }
+    .bigdarktext {
+      font-size: 18px;
+    }
+    .TheBox {
+      width: 100%;
+    }
+    .Thirdsector {
+      width: 90% ;
+    }
+    .littlegrey{
+      width: 95%;
+    }
+    .RowNewsContainer {
+      flex-direction: column; 
+      align-items: center;
+      width: 100vw;
+    }
+    .FourthSection {
+      flex-direction: column;
+    }    
+    .FifthContxt {
+      flex-direction: column;
+    }
+    .ThreeBoxesWithHeader {
+      flex-direction: column;
+    }
+    .ThreeBox {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+    }
+    .FifthHeader {
+      width: 100vw;
+    }
+    .Middle {
+      flex-direction: column;
+      gap: 20px;
+    }
+    .logos {
+      width: 36px;
+      height: 36px;
+    }
+    .FooterFirst {
+      gap: 20px;
+    }
+    .flashinglemonadecontainer  {
+      width: 100vw;
+    }
+    .PowerAndCopy {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin: 20px 0px;
+    }
+    .RowImage {
+      width: 100vw;
+    }
+    .firstrownews {
+      width: 100vw;
+    }
+    .SeeMore {
+      width: 100vw;
+    }
   }
