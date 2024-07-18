@@ -19,8 +19,10 @@ body {
 }
 .All {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  width: 100%;
+  width: 90%;
+  height: 100%;
 }
 .header {
     position: fixed;
@@ -93,7 +95,7 @@ body {
     width: 100vw;
 }
 .flashinglemonadecontainer {
-    width: 1180px;
+    width: 70%;
     height: 36px;
     display: flex;
     border: 1px solid white;
@@ -133,12 +135,14 @@ body {
     background-color: #777;
 }
 .bigimg-container {
-  width: 100%;
+  width: 66%;
+  position: relative;
 }
 .bigimg {
-    height: 497px;
+    width: 100%;
+    height: 400px;
     background-image: url("https://dash-api.yld.mn/api/image/c76d7a96-6ba0-4b7d-80d3-41e812370818");
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     cursor: pointer;
     display: flex;
@@ -158,13 +162,14 @@ body {
     opacity: 0;
     transition: opacity 0.5s ease;
 }
-.bigimg:hover .overlay {
+.bigimg-container:hover .overlay {
     opacity: 0.5;
 }
 .firstbignews {
-    width: 720px;
+    width: 100%;
     height: 71.2px;
     background-color: white;
+    z-index: 999;
 }
 .littlebluetexts {
     color: rgb(0, 64, 212);
@@ -196,15 +201,16 @@ body {
     margin: 25px 0px;
     display: flex;
     gap: 20px;
+    width: 70%;
 }
 .littleimg-container {
-  width: 100%;
+  width: 33%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .littleimg {
-    width: 378px;
+    width: 100%;
     height: 518px;
     background-image: url("https://dash-api.yld.mn/api/image/e2bf93fa-56ec-4a7b-849d-23329f654d2b"); 
     background-size: contain;
@@ -216,14 +222,24 @@ body {
     border: 0.5px solid #e5e2e2;   
     border-radius: 5px;
 }
-
-.littlenewsword-container {
-    width: 350px;
+.littlenewsword-containers {
+    width: 100%;
     height: 117.39px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly; 
     border-bottom: 0.5px solid #e5e2e2;
+    padding-left: 14px;
+}
+
+.littlenewsword-container {
+    width: 100%;
+    height: 117.39px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; 
+    border-bottom: 0.5px solid #e5e2e2;
+    padding-left: 14px;
 }
 .littlebluetexts {
     color: #0040d4;
@@ -245,11 +261,9 @@ body {
     font-weight: 400;
 }
 .firstlittlenews {
-    width: 320.12px;
+    width: 100%;
     height: 117.2px;
     background-color: white;
-    padding-left: 18px;
-    padding-right: 38.89px;
     border-bottom: 0.5px solid #e5e2e2;
 }
 .secondscrolling {
@@ -498,6 +512,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 70%;
   }
   .LeftNews {
     width: 67%;
@@ -510,7 +525,7 @@ body {
   }
   .Advertisement {
     width: 33%;
-    height: 100%;
+    height: 2420px;
     gap: 22px;
     display: flex;
     flex-direction: column;
@@ -559,6 +574,7 @@ body {
     gap: 18px;
     align-items: center;
     width: 100%;
+    margin-top: 20px;
   }
   .RowImage {
     width: 100%;
@@ -606,8 +622,11 @@ body {
   .SeeMore:hover{
     background-color: #d3d4d5;
   }
+  .FifthHead-Container {
+    width: 100%;
+  }
   .FifthHeader {
-    width: 1180px;
+    width: 100%;
     height: 46px;
     display: flex;
     justify-content: space-between;
@@ -615,9 +634,12 @@ body {
     margin-top: 30px;
   }
   .LineDot {
-    border-bottom: 1px dotted #a3a3a3;
+    border: none;
+    border-top: 1px dotted #a3a3a3;
+    color: #fff;
+    background-color: #fff;
     height: 1px;
-    width: 80%;
+    width: 100%;
   }
   .FifthMainContext {
     display: flex;
@@ -625,17 +647,15 @@ body {
     font-weight: 700;
     font-family: Arial, Helvetica, sans-serif;
     color: #000;
-    width: 20%;
   }
   .FifthSide {
     font-size: 13px;
     font-weight: 700;
     font-family: Arial, Helvetica, sans-serif;
-    width: 6%;
     color: #000;
   }
   .FifthImg {
-    width: 378px;
+    width: 32%;
     height: 355px;
     background-image: url("https://dash-api.yld.mn/api/image/3edbed96-5515-4e0f-89bc-7a24789564f2"); 
     background-size: contain;
@@ -649,16 +669,22 @@ body {
   }
   .FifthContxt {
     margin-bottom: 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .ThreeBox {
     display: flex;
     justify-content: space-between;
+    width: 100%;
   }
   .ThreeBoxesWithHeader {
     display: flex;
     flex-direction: column;
     align-content: space-between;
     justify-content: center;
+    width: 70%;
     gap: 20px;
   }
   .Footer {
@@ -667,52 +693,67 @@ body {
   }
   .FooterFirst {
     width: 100%;
-    height: 96px;
+    height: 25%;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 40px;
+    padding: 28px 0px;
   }
   .FooterMiddle {
     border: 1px solid #8193b7df  ;
-    width: 100%;
+    width: 100vw;
+    height: 55%;
     display: flex;
     justify-content: center;
   }
   .Middle {
-    width: 100vw;
     display: flex;
-    padding-top: 28px;
+    width: 95%;
+    gap: 20px;
+    padding: 28px 0px;
   }
   .Middle-Container {
-    width: 100vh;
-  }
-  .FooterLast{
-    width: 100%;
+    width: 70%;
     display: flex;
     align-items: center;
     justify-content: center;
+    justify-content: start;
+  }
+  .FooterLast{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0px;
   }
   .logos {
     height: 40px;
     width: 40px;
   }
   .footerlemon {
-        height: 168px;
+        height: 90%;
+        width: 30%;
+        gap: 16px;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+  }
+  .FooterGreyText {
+    width: 70%;
+    height: 90%;
+    display: flex;
   }
   .footergreytextedleft {
     height: 103px;
-    width: 180px;
+    width: 30%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
   .footergreytextedright {
     height: 131.5px;
-    width: 180px;
+    width: 70%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -738,7 +779,8 @@ body {
     font-size: 14px;
     font-weight: 400;
     font-family: Arial, Helvetica, sans-serif;
-    color: white;
+    color: rgba(255, 255, 255, 0.998);
+    line-height: 21px;
   }
   .copyright {
     font-size: 12px;
@@ -769,15 +811,26 @@ body {
     display: flex;
     justify-content: space-between;
   }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 480px) {
+    .All {
+      width: 90%;
+    }
     .BelowHeader {
       flex-direction: column;
       align-items: center;
-      justify-content: center;  
+      justify-content: center; 
+      width: 100%; 
     }
     .bigimg {
-      width: 100vw;
+      width: 100%;
       height: 273.35px;
+      background-size: contain;
+    }
+    .bigimg-container {
+      width: 90%;
+    }
+    .flashinglemonadecontainer {
+      width: ;
     }
     .navall {
       display: none;
@@ -785,11 +838,18 @@ body {
     .firstbignews {
       width: 100%;
     }
-    .onebigdarktext {
+    .FourthSection {
       width: 100%;
+      flex-direction: column;
+    }
+    .Advertisement {
+      height: 100%;
+    }
+    .onebigdarktext {
+      width: 90%;
     }
     .newsword-container {
-      width: 100vw;
+      width: 100%;
     }
     .secondscrolling {
       flex-direction: column;
@@ -811,29 +871,36 @@ body {
     .RowNewsContainer {
       flex-direction: column; 
       align-items: center;
-      width: 100vw;
+      width: 100%;
     }
-    .FourthSection {
-      flex-direction: column;
-    }    
     .FifthContxt {
       flex-direction: column;
     }
     .ThreeBoxesWithHeader {
       flex-direction: column;
+      width: 100%;
     }
     .ThreeBox {
       flex-direction: column;
       justify-content: center;
       align-items: center;
       width: 100vw;
+      gap: 0;
     }
     .FifthHeader {
-      width: 100vw;
+      width: 100%;
+    }
+    .FifthImg {
+      width: 85%;
     }
     .Middle {
       flex-direction: column;
       gap: 20px;
+      align-items: center;
+      justify-content: center;
+    }
+    .footerlemon {
+      width: 90%;
     }
     .logos {
       width: 36px;
@@ -841,6 +908,14 @@ body {
     }
     .FooterFirst {
       gap: 20px;
+    }
+    .FooterGreyText {
+      flex-direction: column;
+      width: 90%;
+      gap: 20px;
+    }
+    .littleimg-container {
+      width: 90%;
     }
     .flashinglemonadecontainer  {
       width: 100vw;
@@ -852,6 +927,10 @@ body {
       gap: 10px;
       margin: 20px 0px;
     }
+    .Middle-Container {
+      justify-content: center;
+      width: 100%;
+    }
     .RowImage {
       width: 100vw;
     }
@@ -861,4 +940,5 @@ body {
     .SeeMore {
       width: 100vw;
     }
+
   }
